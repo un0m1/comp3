@@ -6,6 +6,7 @@ body {
   padding: 0;
 }
 
+
 h2,
 h3 {
   font-family: 'Montserrat', sans-serif;
@@ -112,9 +113,20 @@ header.scrolled {
   top: 0;
   bottom: 0;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   background-color: rgba(0,0,0,.8);
   color: #fff;
+}
+
+.open-filter {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: calc(100% - 1000px);
+  background-color: rgba(0,0,0,.5);
 }
 
 .overlay .close-menu {
@@ -181,6 +193,11 @@ header.scrolled {
 }
 
 .overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.open-filter.show {
   opacity: 1;
   pointer-events: auto;
 }
@@ -376,6 +393,8 @@ footer {
   top: 0;
   left: 0;
   height: 300px;
+  max-width: 100%;
+  object-fit: cover;
   z-index:1;
 }
 
@@ -491,6 +510,7 @@ fieldset label+label {
 
 /* media */
 @media (min-width: 1000px) {
+
   .ceomessage {
     display: flex;
   }

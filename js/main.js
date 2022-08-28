@@ -5,13 +5,21 @@
   const open = document.querySelector('.hamburger');
   const menu = document.querySelector('.overlay');
   const close = document.querySelector('.close-menu');
+  const openfilter  = document.querySelector('.open-filter');
 
   open.addEventListener('click', () => {
     menu.classList.add('show');
+    openfilter.classList.add('show');
   });
   
   close.addEventListener('click', () => {
     menu.classList.remove('show');
+    openfilter.classList.remove('show');
+  });
+  
+  openfilter.addEventListener('click', () => {
+    menu.classList.remove('show');
+    openfilter.classList.remove('show');
   });
 
   // header
